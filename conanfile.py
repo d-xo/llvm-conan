@@ -70,10 +70,8 @@ class LLVMConan(ConanFile):
             )
         )
 
-        if (environ['LLVM_CONAN_UNIT_TESTS'] == 'TRUE'):
-            self.run('cmake --build . -- check {0}'.format(cmake.build_config))
-            self.run('cmake --build . -- check-clang {0}'.format(cmake.build_config))
-
+        self.run('cmake --build . -- check {0}'.format(cmake.build_config))
+        self.run('cmake --build . -- check-clang {0}'.format(cmake.build_config))
         self.run('cmake --build . -- install {0}'.format(cmake.build_config))
 
     def package(self):
