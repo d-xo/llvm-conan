@@ -26,7 +26,6 @@ class LLVMConan(ConanFile):
             '--recursive '
             '-b release_39 '
             '--depth=1 '
-            '--shallow-submodules '
             '{0} {1}'.format(
                 url, destination
             )
