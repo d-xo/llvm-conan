@@ -6,7 +6,9 @@ class LLVMConan(ConanFile):
     name = "llvm"
     version = "3.9"
     settings = "os", "compiler", "build_type", "arch"
-    install_dir = 'install' # must be relative
+    install_dir = 'install'
+    url = 'https://github.com/xwvvvvwx/llvm-conan'
+    license = NCSA
 
     # ---------------------------------------------------------
     #  Helper
